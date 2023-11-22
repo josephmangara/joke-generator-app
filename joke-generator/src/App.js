@@ -1,7 +1,9 @@
 
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
 import Randomjoke from './components/Randomjoke';
+import Likebutton from './components/Likebutton';
 import Footer from './components/Footer';
 
 function App() {
@@ -22,20 +24,18 @@ function App() {
 
   return (
     <div>
-      <h1>Chuckle Charm</h1>
-      <p>Welcome to the World Of Fun and Comedy. Crack your ribs with laughter</p>
+      <Header />
       <ol>
-        
           {jokes.map((joke, index) => (
           <li key={index}>
             <p>Setup: {joke.setup}</p>
             <p>Punchline: {joke.punchline}</p>
-            <hr />
+            <br />
           </li>
-        ))}
-       
+        ))}      
       </ol>
     <Randomjoke />
+    <Likebutton />
     <Footer />
     </div>
   );
