@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='body'>
       <Header />
       <ol>
           {jokes.map((joke, index) => (
@@ -34,7 +34,7 @@ function App() {
           </li>
         ))}      
       </ol>
-    <Randomjoke />
+    <Randomjoke /><br />
     <Likebutton />
     <Footer />
     </div>

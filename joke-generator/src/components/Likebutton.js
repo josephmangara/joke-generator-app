@@ -42,19 +42,19 @@ export default function Likebutton(){
         }
     };
     return (
-        <div>
+        <div className="btn-container">
             <button 
               className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
               onClick={handleLikeClick}>
               <span class="material-icons">thumb_up</span>
-              Like {likeCount}
+               {likeCount}
             </button>
 
             <button 
                className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
                onClick={handleDislikeClick}>
                <span class="material-icons">thumb_down</span>
-               Dislike {dislikeCount}
+                {dislikeCount}
             </button>
         </div>
     )

@@ -45,3 +45,8 @@ code {
   height: 50px;
   /* margin-top: 20px; */
 }
+
+.btn-container {
+  display: flex;
+  align-items: center;
+}
