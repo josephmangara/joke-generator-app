@@ -5,6 +5,10 @@ import Header from './components/Header';
 import Randomjoke from './components/Randomjoke';
 import Likebutton from './components/Likebutton';
 import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Contacts from './pages/Contacts';
+import Home from './pages/Home';
+import Aboutus from './pages/Aboutus';
 
 function App() {
   const [jokes, setJokes] = useState([]);
@@ -25,6 +29,12 @@ function App() {
   return (
     <div className='body'>
       <Header />
+      <Routes>
+        <Route path='/home' element={<Home/>}></Route>
+        <Route path='/contacts' element={<Contacts/>}></Route>
+        <Route path='/About-us' element={<Aboutus/>}></Route>
+      </Routes>
+      <p>Welcome to the World Of Fun and Comedy. Crack your ribs with laughter</p>
       <ol>
           {jokes.map((joke, index) => (
           <li key={index}>
